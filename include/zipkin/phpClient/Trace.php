@@ -48,14 +48,12 @@ class ZKTrace
 
     
     //构建span,可能是topspan,也可能不是
-    public  function clientSend($span_name)
+    public  function clientSend($span_name, $span = null)
     {
         //判断共享内存中是否 “on”;
-        var_dump(self::$shmopobj->database);
         if (isset(self::$shmopobj->database) && self::$shmopobj->database != null &&  self::$shmopobj->database == "on" )
         {
-            echo 'here';
-            SpanBuilder::clientSend($span_name);
+            SpanBuilder::clientSend($span_name, $span);
         }
         else
         {
@@ -69,7 +67,6 @@ class ZKTrace
         //判断共享内存中是否 “on”;
         if (isset(self::$shmopobj->database) && self::$shmopobj->database != null &&  self::$shmopobj->database=="on")
         {
-            echo 'there';
             SpanBuilder::clientReceive();
         }
     }
@@ -78,6 +75,8 @@ class ZKTrace
 class SpanBuilder{
 
     private static $STACK  = NULL ;
+
+    private $_span;
 
     
 
@@ -88,20 +87,32 @@ class SpanBuilder{
         self::$STACK = new SplStack();
         //self::$STACK->
     }
-    public static function clientSend($span_name)
+
+    /**
+     * 如果span为空，生成随机span
+     * @param $span_name
+     * @param null $span
+     */
+    public static function clientSend($span_name, $span = null)
     {
         if (is_null(self::$STACK)) {
             self::init();
         }
-        $span = new Span();
-        $span->name     = $span_name;
-        $span->trace_id = SpanContext::getCurrentTraceId();     
-        $span->id       = SpanContext::getCurrentSpanId();
-        $span->parent_id= SpanContext::getParentSpanId();
-        
-        $span->annotations = array(AnnotationBuilder::clientSendAnnotation($span_name),AnnotationBuilder::serverReceAnnotation($span_name)); 
+
+        if (empty($span))
+        {
+            $span = new Span();
+            $span->name     = $span_name;
+            $span->trace_id = SpanContext::getCurrentTraceId();
+            $span->id       = SpanContext::getCurrentSpanId();
+            $span->parent_id= SpanContext::getParentSpanId();
+
+            $span->annotations = array(AnnotationBuilder::clientSendAnnotation($span_name),AnnotationBuilder::serverReceAnnotation($span_name));
+            //        MessageQueue::getInstance()->push($span);
+        }
+
         self::$STACK->push($span);
-//        MessageQueue::getInstance()->push($span);
+
     }
 
     public static function clientReceive()
@@ -124,8 +135,7 @@ class SpanBuilder{
 
         MessageQueue::getInstance()->push($span);
 //        echo "over-";
-        echo 'there';
-    
+
 
     }
 
@@ -204,7 +214,7 @@ class SpanContext
 
     public static function clearSpanID()
     {
-        self::$ID_STACK->pop(); 
+        self::$ID_STACK->pop();
     }
     
 }
@@ -213,7 +223,7 @@ class SpanContext
 
 class AnnotationBuilder
 {
-    
+
     public static function clientSendAnnotation($spanName)
     {
         return self::makeAnnotation($GLOBALS['zipkinCore_CONSTANTS']['CLIENT_SEND'], $spanName);
@@ -231,9 +241,6 @@ class AnnotationBuilder
         return self::makeAnnotation($GLOBALS['zipkinCore_CONSTANTS']['CLIENT_RECV'], $spanName);
     }
     
-    
-    
-    
     private static function makeAnnotation($type,$spanName)
     {
         $ann  = new Annotation ();
@@ -242,14 +249,7 @@ class AnnotationBuilder
         $ann->value     = $type;
         return $ann;
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
 }
 
 class EndpointBuilder {

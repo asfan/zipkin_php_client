@@ -1,0 +1,142 @@
+object(Span)#5 (7) {
+  ["trace_id"]=>
+  int(34567048)
+  ["name"]=>
+  string(6) "motor1"
+  ["id"]=>
+  int(34567048)
+  ["parent_id"]=>
+  NULL
+  ["annotations"]=>
+  array(2) {
+    [0]=>
+    object(Annotation)#7 (4) {
+      ["timestamp"]=>
+      float(1.4652972778824E+15)
+      ["value"]=>
+      string(2) "cs"
+      ["host"]=>
+      object(Endpoint)#8 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(9091)
+        ["service_name"]=>
+        string(6) "motor1"
+      }
+      ["duration"]=>
+      NULL
+    }
+    [1]=>
+    object(Annotation)#9 (4) {
+      ["timestamp"]=>
+      float(1.4652972778825E+15)
+      ["value"]=>
+      string(2) "sr"
+      ["host"]=>
+      object(Endpoint)#10 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(9091)
+        ["service_name"]=>
+        string(6) "motor1"
+      }
+      ["duration"]=>
+      NULL
+    }
+  }
+  ["binary_annotations"]=>
+  NULL
+  ["debug"]=>
+  bool(false)
+}
+object(Span)#5 (7) {
+  ["trace_id"]=>
+  int(34567048)
+  ["name"]=>
+  string(6) "motor1"
+  ["id"]=>
+  int(34567048)
+  ["parent_id"]=>
+  NULL
+  ["annotations"]=>
+  array(4) {
+    [0]=>
+    object(Annotation)#7 (4) {
+      ["timestamp"]=>
+      float(1.4652972778824E+15)
+      ["value"]=>
+      string(2) "cs"
+      ["host"]=>
+      object(Endpoint)#8 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(9091)
+        ["service_name"]=>
+        string(6) "motor1"
+      }
+      ["duration"]=>
+      NULL
+    }
+    [1]=>
+    object(Annotation)#9 (4) {
+      ["timestamp"]=>
+      float(1.4652972778825E+15)
+      ["value"]=>
+      string(2) "sr"
+      ["host"]=>
+      object(Endpoint)#10 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(9091)
+        ["service_name"]=>
+        string(6) "motor1"
+      }
+      ["duration"]=>
+      NULL
+    }
+    [2]=>
+    object(Annotation)#11 (4) {
+      ["timestamp"]=>
+      float(1.4652972778829E+15)
+      ["value"]=>
+      string(2) "ss"
+      ["host"]=>
+      object(Endpoint)#12 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(9091)
+        ["service_name"]=>
+        string(6) "motor1"
+      }
+      ["duration"]=>
+      NULL
+    }
+    [3]=>
+    object(Annotation)#13 (4) {
+      ["timestamp"]=>
+      float(1.4652972778829E+15)
+      ["value"]=>
+      string(2) "cr"
+      ["host"]=>
+      object(Endpoint)#14 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(9091)
+        ["service_name"]=>
+        string(6) "motor1"
+      }
+      ["duration"]=>
+      NULL
+    }
+  }
+  ["binary_annotations"]=>
+  NULL
+  ["debug"]=>
+  bool(false)
+}

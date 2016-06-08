@@ -1,26 +1,17 @@
 <?php
-include_once '../include/zipkin/phpClient/Trace.php'; 
+include_once '../include/zipkin/phpClient/Trace.php';
 
 
-print_r(1);
-    ZKTrace::getInstance()->clientSend("motor1");
-//	ZKTrace::clientSend("phpspansub49");
-//		ZKTrace::clientSend("phpspansubeub49");
-//		ZKTrace::clientReceive();
-//	ZKTrace::clientReceive();
-print_r(2);
+$spanConfig = array(
+    'trace_id' => 123456789,
+    'id' => 987654321,
+    'name' => 'apple',
+    'parent_id' => 0,
+//    'annotations' => AnnotationBuilder::makeAnnotation($GLOBALS['zipkinCore_CONSTANTS']['CLIENT_SEND'], 'motor_test_1')
+);
+$span1 = new Span($spanConfig);
 
-    ZKTrace::getInstance()->clientSend("motor2");
-print_r(3);
-
-    ZKTrace::getInstance()->clientReceive();
-print_r(4);
-
-    ZKTrace::getInstance()->clientReceive();
-    
-//for($i=1;$i<=10;$i++){
-//echo Demo::add()."<br/>";
-
-//SpanBuilder::clientSend("1");
-//SpanBuilder::clientReceive();
-
+ZKTrace::getInstance()->clientSend("motor1");
+//ZKTrace::getInstance()->clientSend("motor2");
+//ZKTrace::getInstance()->clientReceive();
+ZKTrace::getInstance()->clientReceive();

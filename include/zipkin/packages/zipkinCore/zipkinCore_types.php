@@ -605,7 +605,6 @@ class Span {
 
   public function write($output) {
      
-    
     $xfer = 0;
     $xfer += $output->writeStructBegin('Span');
     if ($this->trace_id !== null) {
