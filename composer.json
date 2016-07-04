@@ -1,0 +1,18 @@
+{
+    "name": "asfan/zipkin_php_client",
+    "require": {
+        "got/stark": "^1.2"
+    },
+    "type": "library",
+    "license": "MIT",
+    "secure-http": false,
+    "autoload": {
+        "psr-4": {"Th\\": "src/"}
+    },
+    "authors": [
+        {
+            "name": "Yuanping Fan",
+            "email": "applefanapple@gmail.com"
+        }
+    ]
+}

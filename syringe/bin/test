@@ -1,0 +1,443 @@
+array(6) {
+  [0]=>
+  array(2) {
+    ["span_name"]=>
+    string(27) "testx.mall.auto.sina.com.cn"
+    ["config"]=>
+    array(5) {
+      ["trace_id"]=>
+      int(844180087144425)
+      ["id"]=>
+      int(844180087144425)
+      ["name"]=>
+      string(5) "apple"
+      ["parent_id"]=>
+      int(0)
+      ["annotation"]=>
+      array(1) {
+        [0]=>
+        array(3) {
+          ["type"]=>
+          string(2) "ss"
+          ["port"]=>
+          int(80)
+          ["timestamp"]=>
+          float(1.4653844180087E+15)
+        }
+      }
+    }
+  }
+  [1]=>
+  array(2) {
+    ["span_name"]=>
+    string(19) "testx.car.weibo.com"
+    ["config"]=>
+    array(5) {
+      ["trace_id"]=>
+      int(844180087144425)
+      ["id"]=>
+      int(844180087144426)
+      ["name"]=>
+      string(9) "apple_fan"
+      ["parent_id"]=>
+      int(844180087144425)
+      ["annotation"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["type"]=>
+          string(2) "cs"
+          ["value"]=>
+          string(4) "test"
+          ["port"]=>
+          int(80)
+          ["timestamp"]=>
+          float(1.4653844180169E+15)
+        }
+      }
+    }
+  }
+  [2]=>
+  array(2) {
+    ["span_name"]=>
+    string(19) "testx.car.weibo.com"
+    ["config"]=>
+    array(5) {
+      ["trace_id"]=>
+      int(844180087144425)
+      ["id"]=>
+      int(844180087144421)
+      ["name"]=>
+      string(9) "apple_fan"
+      ["parent_id"]=>
+      int(844180087144425)
+      ["annotation"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["type"]=>
+          string(2) "sr"
+          ["value"]=>
+          string(4) "test"
+          ["port"]=>
+          int(80)
+          ["timestamp"]=>
+          float(1.4653844180971E+15)
+        }
+      }
+    }
+  }
+  [3]=>
+  array(2) {
+    ["span_name"]=>
+    string(19) "testx.car.weibo.com"
+    ["config"]=>
+    array(5) {
+      ["trace_id"]=>
+      int(844180087144425)
+      ["id"]=>
+      int(844180087144421)
+      ["name"]=>
+      string(9) "apple_fan"
+      ["parent_id"]=>
+      int(844180087144425)
+      ["annotation"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["type"]=>
+          string(2) "ss"
+          ["value"]=>
+          string(4) "test"
+          ["port"]=>
+          int(80)
+          ["timestamp"]=>
+          float(1.4653844181392E+15)
+        }
+      }
+    }
+  }
+  [4]=>
+  array(2) {
+    ["span_name"]=>
+    string(19) "testx.car.weibo.com"
+    ["config"]=>
+    array(5) {
+      ["trace_id"]=>
+      int(844180087144425)
+      ["id"]=>
+      int(844180087144421)
+      ["name"]=>
+      string(9) "apple_fan"
+      ["parent_id"]=>
+      int(844180087144425)
+      ["annotation"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["type"]=>
+          string(2) "cr"
+          ["value"]=>
+          string(4) "test"
+          ["port"]=>
+          int(80)
+          ["timestamp"]=>
+          float(1.4653844182008E+15)
+        }
+      }
+    }
+  }
+  [5]=>
+  array(2) {
+    ["span_name"]=>
+    string(27) "testx.mall.auto.sina.com.cn"
+    ["config"]=>
+    array(5) {
+      ["trace_id"]=>
+      int(844180087144425)
+      ["id"]=>
+      int(844180087144425)
+      ["name"]=>
+      string(5) "apple"
+      ["parent_id"]=>
+      int(0)
+      ["annotation"]=>
+      array(1) {
+        [0]=>
+        array(3) {
+          ["type"]=>
+          string(2) "sr"
+          ["port"]=>
+          int(80)
+          ["timestamp"]=>
+          float(1.4653844182191E+15)
+        }
+      }
+    }
+  }
+}
+-----------------------------object(Span)#10 (7) {
+  ["trace_id"]=>
+  int(844180087144425)
+  ["name"]=>
+  string(5) "apple"
+  ["id"]=>
+  int(844180087144425)
+  ["parent_id"]=>
+  int(0)
+  ["annotations"]=>
+  array(1) {
+    [0]=>
+    object(Annotation)#11 (4) {
+      ["timestamp"]=>
+      int(1465384418008700)
+      ["value"]=>
+      string(2) "ss"
+      ["host"]=>
+      object(Endpoint)#12 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(80)
+        ["service_name"]=>
+        string(27) "testx.mall.auto.sina.com.cn"
+      }
+      ["duration"]=>
+      NULL
+    }
+  }
+  ["binary_annotations"]=>
+  NULL
+  ["debug"]=>
+  bool(false)
+}
+array(1) {
+  [0]=>
+  object(LogEntry)#8 (2) {
+    ["category"]=>
+    string(6) "zipkin"
+    ["message"]=>
+    string(172) "CgABAAL/xv44f+kLAAMAAAAFYXBwbGUKAAQAAv/G/jh/6QoABQAAAAAAAAAADwAGDAAAAAEKAAEABTTCZbHefAsAAgAAAAJzcwwAAwgAAQAAAAAGAAIAUAsAAwAAABt0ZXN0eC5tYWxsLmF1dG8uc2luYS5jb20uY24AAAIACQAA"
+  }
+}
+========================-----------------------------object(Span)#6 (7) {
+  ["trace_id"]=>
+  int(844180087144425)
+  ["name"]=>
+  string(9) "apple_fan"
+  ["id"]=>
+  int(844180087144426)
+  ["parent_id"]=>
+  int(844180087144425)
+  ["annotations"]=>
+  array(1) {
+    [0]=>
+    object(Annotation)#5 (4) {
+      ["timestamp"]=>
+      int(1465384418016900)
+      ["value"]=>
+      string(2) "cs"
+      ["host"]=>
+      object(Endpoint)#16 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(80)
+        ["service_name"]=>
+        string(19) "testx.car.weibo.com"
+      }
+      ["duration"]=>
+      NULL
+    }
+  }
+  ["binary_annotations"]=>
+  NULL
+  ["debug"]=>
+  bool(false)
+}
+array(1) {
+  [0]=>
+  object(LogEntry)#7 (2) {
+    ["category"]=>
+    string(6) "zipkin"
+    ["message"]=>
+    string(168) "CgABAAL/xv44f+kLAAMAAAAJYXBwbGVfZmFuCgAEAAL/xv44f+oKAAUAAv/G/jh/6Q8ABgwAAAABCgABAAU0wmWx/oQLAAIAAAACY3MMAAMIAAEAAAAABgACAFALAAMAAAATdGVzdHguY2FyLndlaWJvLmNvbQAAAgAJAAA="
+  }
+}
+========================-----------------------------object(Span)#14 (7) {
+  ["trace_id"]=>
+  int(844180087144425)
+  ["name"]=>
+  string(9) "apple_fan"
+  ["id"]=>
+  int(844180087144421)
+  ["parent_id"]=>
+  int(844180087144425)
+  ["annotations"]=>
+  array(1) {
+    [0]=>
+    object(Annotation)#13 (4) {
+      ["timestamp"]=>
+      int(1465384418097100)
+      ["value"]=>
+      string(2) "sr"
+      ["host"]=>
+      object(Endpoint)#12 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(80)
+        ["service_name"]=>
+        string(19) "testx.car.weibo.com"
+      }
+      ["duration"]=>
+      NULL
+    }
+  }
+  ["binary_annotations"]=>
+  NULL
+  ["debug"]=>
+  bool(false)
+}
+array(1) {
+  [0]=>
+  object(LogEntry)#15 (2) {
+    ["category"]=>
+    string(6) "zipkin"
+    ["message"]=>
+    string(168) "CgABAAL/xv44f+kLAAMAAAAJYXBwbGVfZmFuCgAEAAL/xv44f+UKAAUAAv/G/jh/6Q8ABgwAAAABCgABAAU0wmWzN8wLAAIAAAACc3IMAAMIAAEAAAAABgACAFALAAMAAAATdGVzdHguY2FyLndlaWJvLmNvbQAAAgAJAAA="
+  }
+}
+========================-----------------------------object(Span)#10 (7) {
+  ["trace_id"]=>
+  int(844180087144425)
+  ["name"]=>
+  string(9) "apple_fan"
+  ["id"]=>
+  int(844180087144421)
+  ["parent_id"]=>
+  int(844180087144425)
+  ["annotations"]=>
+  array(1) {
+    [0]=>
+    object(Annotation)#8 (4) {
+      ["timestamp"]=>
+      int(1465384418139200)
+      ["value"]=>
+      string(2) "ss"
+      ["host"]=>
+      object(Endpoint)#16 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(80)
+        ["service_name"]=>
+        string(19) "testx.car.weibo.com"
+      }
+      ["duration"]=>
+      NULL
+    }
+  }
+  ["binary_annotations"]=>
+  NULL
+  ["debug"]=>
+  bool(false)
+}
+array(1) {
+  [0]=>
+  object(LogEntry)#11 (2) {
+    ["category"]=>
+    string(6) "zipkin"
+    ["message"]=>
+    string(168) "CgABAAL/xv44f+kLAAMAAAAJYXBwbGVfZmFuCgAEAAL/xv44f+UKAAUAAv/G/jh/6Q8ABgwAAAABCgABAAU0wmWz3EALAAIAAAACc3MMAAMIAAEAAAAABgACAFALAAMAAAATdGVzdHguY2FyLndlaWJvLmNvbQAAAgAJAAA="
+  }
+}
+========================-----------------------------object(Span)#6 (7) {
+  ["trace_id"]=>
+  int(844180087144425)
+  ["name"]=>
+  string(9) "apple_fan"
+  ["id"]=>
+  int(844180087144421)
+  ["parent_id"]=>
+  int(844180087144425)
+  ["annotations"]=>
+  array(1) {
+    [0]=>
+    object(Annotation)#7 (4) {
+      ["timestamp"]=>
+      int(1465384418200800)
+      ["value"]=>
+      string(2) "cr"
+      ["host"]=>
+      object(Endpoint)#12 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(80)
+        ["service_name"]=>
+        string(19) "testx.car.weibo.com"
+      }
+      ["duration"]=>
+      NULL
+    }
+  }
+  ["binary_annotations"]=>
+  NULL
+  ["debug"]=>
+  bool(false)
+}
+array(1) {
+  [0]=>
+  object(LogEntry)#5 (2) {
+    ["category"]=>
+    string(6) "zipkin"
+    ["message"]=>
+    string(168) "CgABAAL/xv44f+kLAAMAAAAJYXBwbGVfZmFuCgAEAAL/xv44f+UKAAUAAv/G/jh/6Q8ABgwAAAABCgABAAU0wmW0zOALAAIAAAACY3IMAAMIAAEAAAAABgACAFALAAMAAAATdGVzdHguY2FyLndlaWJvLmNvbQAAAgAJAAA="
+  }
+}
+========================-----------------------------object(Span)#14 (7) {
+  ["trace_id"]=>
+  int(844180087144425)
+  ["name"]=>
+  string(5) "apple"
+  ["id"]=>
+  int(844180087144425)
+  ["parent_id"]=>
+  int(0)
+  ["annotations"]=>
+  array(1) {
+    [0]=>
+    object(Annotation)#15 (4) {
+      ["timestamp"]=>
+      int(1465384418219100)
+      ["value"]=>
+      string(2) "sr"
+      ["host"]=>
+      object(Endpoint)#16 (3) {
+        ["ipv4"]=>
+        bool(false)
+        ["port"]=>
+        int(80)
+        ["service_name"]=>
+        string(27) "testx.mall.auto.sina.com.cn"
+      }
+      ["duration"]=>
+      NULL
+    }
+  }
+  ["binary_annotations"]=>
+  NULL
+  ["debug"]=>
+  bool(false)
+}
+array(1) {
+  [0]=>
+  object(LogEntry)#13 (2) {
+    ["category"]=>
+    string(6) "zipkin"
+    ["message"]=>
+    string(172) "CgABAAL/xv44f+kLAAMAAAAFYXBwbGUKAAQAAv/G/jh/6QoABQAAAAAAAAAADwAGDAAAAAEKAAEABTTCZbUUXAsAAgAAAAJzcgwAAwgAAQAAAAAGAAIAUAsAAwAAABt0ZXN0eC5tYWxsLmF1dG8uc2luYS5jb20uY24AAAIACQAA"
+  }
+}
+========================

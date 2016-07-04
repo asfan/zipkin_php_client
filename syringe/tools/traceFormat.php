@@ -145,7 +145,7 @@ class SpanFormat {
 //            $type = $spanConfig['annotation_type'];
 //            $port = $spanConfig['endpoint_port'];
 
-            $span = new Span($spanConfig);
+            $span = new Span($spanConfig);//span->name test
             if (isset($spanConfig['annotation']) && is_array($spanConfig['annotation'])) {
                 foreach ($spanConfig['annotation'] as $value) {
                     $span->annotations[] = AnnotationFormat::makeAnnotation($value['type'], $spanName, $value['port'], $value['timestamp']);
@@ -330,7 +330,7 @@ class AnnotationFormat {
 
     public static function makeAnnotation($type, $spanName, $port = null, $timestamp = null)
     {
-        $ann  = new Annotation ();
+        $ann  = new Annotation();
         if (empty($timestamp)) {
             $ann->timestamp = (microtime(true) * 1000000);
         }

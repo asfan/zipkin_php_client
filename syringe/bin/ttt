@@ -1,0 +1,122 @@
+array(3) {
+  [0]=>
+  array(2) {
+    ["span_name"]=>
+    string(21) "mall.auto.sina.com.cn"
+    ["config"]=>
+    array(5) {
+      ["trace_id"]=>
+      int(844180087144417)
+      ["id"]=>
+      int(844180087144417)
+      ["parent_id"]=>
+      int(0)
+      ["name"]=>
+      string(5) "apple"
+      ["annotation"]=>
+      array(1) {
+        [0]=>
+        array(3) {
+          ["type"]=>
+          string(2) "sr"
+          ["port"]=>
+          int(80)
+          ["timestamp"]=>
+          float(1.4653844180087E+15)
+        }
+      }
+    }
+  }
+  [1]=>
+  array(2) {
+    ["span_name"]=>
+    string(13) "car.weibo.com"
+    ["config"]=>
+    array(5) {
+      ["trace_id"]=>
+      int(844180087144417)
+      ["id"]=>
+      int(844180168629567)
+      ["parent_id"]=>
+      int(844180087144417)
+      ["name"]=>
+      string(5) "apple"
+      ["annotation"]=>
+      array(4) {
+        [0]=>
+        array(3) {
+          ["type"]=>
+          string(2) "cs"
+          ["port"]=>
+          int(80)
+          ["timestamp"]=>
+          float(1.4653844180169E+15)
+        }
+        [1]=>
+        array(1) {
+          [0]=>
+          array(3) {
+            ["type"]=>
+            string(2) "sr"
+            ["port"]=>
+            int(80)
+            ["timestamp"]=>
+            float(1.4653844180971E+15)
+          }
+        }
+        [2]=>
+        array(1) {
+          [0]=>
+          array(3) {
+            ["type"]=>
+            string(2) "ss"
+            ["port"]=>
+            int(80)
+            ["timestamp"]=>
+            float(1.4653844181392E+15)
+          }
+        }
+        [3]=>
+        array(1) {
+          [0]=>
+          array(3) {
+            ["type"]=>
+            string(2) "cr"
+            ["port"]=>
+            int(80)
+            ["timestamp"]=>
+            float(1.4653844182008E+15)
+          }
+        }
+      }
+    }
+  }
+  [2]=>
+  array(2) {
+    ["span_name"]=>
+    string(21) "mall.auto.sina.com.cn"
+    ["config"]=>
+    array(5) {
+      ["trace_id"]=>
+      int(844180087144417)
+      ["id"]=>
+      int(844180087144417)
+      ["parent_id"]=>
+      int(0)
+      ["name"]=>
+      string(5) "apple"
+      ["annotation"]=>
+      array(1) {
+        [0]=>
+        array(3) {
+          ["type"]=>
+          string(2) "ss"
+          ["port"]=>
+          int(80)
+          ["timestamp"]=>
+          float(1.4653844182191E+15)
+        }
+      }
+    }
+  }
+}
